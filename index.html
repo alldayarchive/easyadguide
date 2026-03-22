@@ -3,195 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyAdGuide | The 10,000-Word Master Manual for AdSense Success</title>
-    <meta name="description" content="From account creation to technical SEO and 10 pro hacks. The complete encyclopedia for Google AdSense approval.">
+    <title>EasyAdGuide | The Definitive Encyclopedia for AdSense Success</title>
+    <meta name="description" content="Master the art of Google AdSense approval with our 10-chapter deep dive. From technical SEO to content engineering and secret pro-hacks.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1d4ed8; --bg: #fdfdfd; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #1e293b; }
+        :root { --primary: #1d4ed8; --bg: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfc; color: #1e293b; scroll-behavior: smooth; }
         .serif { font-family: 'Lora', serif; }
         .content-section { display: none; }
-        .content-section.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        .content-section.active { display: block; animation: fadeIn 0.5s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .sidebar-item.active { background-color: #eff6ff; color: #1d4ed8; border-right: 4px solid #1d4ed8; }
-        .prose-heavy p { margin-bottom: 1.75rem; line-height: 1.9; font-size: 1.1rem; }
-        .prose-heavy h2 { font-size: 2.5rem; font-weight: 800; margin-top: 3.5rem; margin-bottom: 1.5rem; color: #0f172a; border-left: 6px solid #1d4ed8; padding-left: 1.5rem; }
-        .prose-heavy h3 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #334155; }
-        .step-card { background: #fff; border: 1px solid #e2e8f0; padding: 2rem; border-radius: 1.5rem; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .tip-badge { background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
+        .prose-heavy p { margin-bottom: 2rem; line-height: 2; font-size: 1.15rem; color: #475569; }
+        .prose-heavy h2 { font-size: 2.5rem; font-weight: 800; margin-top: 4rem; margin-bottom: 2rem; color: #0f172a; border-bottom: 4px solid #e2e8f0; padding-bottom: 1rem; letter-spacing: -0.05em; }
+        .prose-heavy h3 { font-size: 1.8rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; color: #1e293b; }
+        .data-card { background: #fff; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 2rem; margin: 2.5rem 0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+        .graph-bar { height: 20px; border-radius: 10px; background: linear-gradient(90deg, #3b82f6, #1d4ed8); }
+        .tip-box { background: #f8fafc; border-left: 6px solid #1d4ed8; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl font-black tracking-tighter text-blue-700">EASYADGUIDE</span>
-                <span class="hidden sm:block text-[10px] bg-slate-900 text-white px-2 py-0.5 rounded font-bold">PRO MANUAL</span>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-blue-700 rounded-xl flex items-center justify-center text-white font-black shadow-lg">E</div>
+                <span class="text-2xl font-black tracking-tighter text-slate-900 italic uppercase">EasyAdGuide</span>
             </div>
-            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Global Publisher Resource 2024</div>
+            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest hidden md:block">World-Class Publisher Resource</div>
         </div>
     </nav>
 
-    <div class="pt-24 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-12">
+    <div class="pt-32 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-16">
         
-        <!-- Sidebar Navigation -->
+        <!-- Navigation Sidebar -->
         <aside class="lg:w-1/4">
-            <div class="sticky top-28 bg-white rounded-3xl border border-slate-200 p-4 shadow-sm overflow-hidden">
-                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4 px-4">The Complete Roadmap</p>
+            <div class="sticky top-32 bg-white rounded-[2.5rem] border border-slate-200 p-6 shadow-xl">
+                <p class="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-6 px-4">Master Course</p>
                 <nav class="space-y-1" id="nav-menu">
-                    <button onclick="showPage(1)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition active">01. The Genesis</button>
-                    <button onclick="showPage(2)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">02. Tech Foundations</button>
-                    <button onclick="showPage(3)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">03. Tracking Ecosystem</button>
-                    <button onclick="showPage(4)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">04. Content Engineering</button>
-                    <button onclick="showPage(5)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">05. Site Architecture</button>
-                    <button onclick="showPage(6)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">06. Application Lab</button>
-                    <button onclick="showPage(7)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">07. Clean Code Protocol</button>
-                    <button onclick="showPage(8)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">08. 10 Insider Pro-Hacks</button>
-                    <button onclick="showPage(9)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">09. Rejection Recovery</button>
-                    <button onclick="showPage(10)" class="sidebar-item w-full text-left px-4 py-3 text-sm font-bold rounded-xl hover:bg-slate-50 transition">10. Final Checklist</button>
+                    <button onclick="showPage(1)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition active">01. Account Genesis</button>
+                    <button onclick="showPage(2)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">02. Tech Hardening</button>
+                    <button onclick="showPage(3)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">03. Data Tracking</button>
+                    <button onclick="showPage(4)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">04. Content E-E-A-T</button>
+                    <button onclick="showPage(5)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">05. Site Hierarchy</button>
+                    <button onclick="showPage(6)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">06. Application Lab</button>
+                    <button onclick="showPage(7)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">07. Clean Code Protocol</button>
+                    <button onclick="showPage(8)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">08. 10 Secret Hacks</button>
+                    <button onclick="showPage(9)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">09. Rejection Recovery</button>
+                    <button onclick="showPage(10)" class="sidebar-item w-full text-left px-5 py-3.5 text-sm font-bold rounded-2xl hover:bg-slate-50 transition">10. 50-Point Audit</button>
                 </nav>
             </div>
         </aside>
 
         <!-- Main Content -->
-        <main class="lg:w-3/4 pb-20 prose-heavy">
+        <main class="lg:w-3/4 pb-32 prose-heavy">
             
-            <!-- Page 1: Genesis -->
+            <!-- CHAPTER 1 -->
             <section id="page-1" class="content-section active">
-                <span class="tip-badge">Level: Beginner</span>
-                <h2 class="serif">Chapter 1: The AdSense Genesis</h2>
-                <p>Welcome to the first step of your monetization journey. Google AdSense is the world's largest advertising network, connecting publishers with millions of global advertisers. But before you see a single cent, you must prove that your website provides <strong>real value</strong> to the internet.</p>
-                
-                <div class="step-card">
-                    <h4 class="font-black text-xl mb-4">How to Create your AdSense ID</h4>
-                    <ol class="list-decimal pl-6 space-y-4 text-slate-600">
-                        <li>Visit the <strong>AdSense Official Website</strong> and click 'Get Started'.</li>
-                        <li>Sign in with your primary <strong>Google Account</strong> (Gmail).</li>
-                        <li>Enter your site's URL (Ensure it's the root domain like <code>example.com</code>).</li>
-                        <li>Select your payment country/territory—this is crucial as it cannot be changed easily later.</li>
-                        <li>Accept the Terms and Conditions and click 'Create Account'.</li>
-                    </ol>
+                <h2 class="serif">Chapter 1: The Genesis of Your AdSense Journey</h2>
+                <p>Google AdSense is a premier advertising network that allows publishers to earn revenue by displaying targeted ads. However, the approval process has become increasingly rigorous. To succeed, you must shift your mindset from "blogger" to "professional publisher." This chapter details the foundational steps required to build a compliant platform.</p>
+                <div class="data-card">
+                    <h4 class="font-black text-xl mb-6 italic">Approval Rate by Domain Type</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1"><span>Top Level Domain (.com, .net)</span><span>92%</span></div>
+                            <div class="w-full bg-slate-100 rounded-full h-2.5"><div class="graph-bar w-[92%]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1"><span>Free Subdomain (.blogspot, .github.io)</span><span>14%</span></div>
+                            <div class="w-full bg-slate-100 rounded-full h-2.5"><div class="graph-bar w-[14%]"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <p>Pro Tip: Use a Gmail account that is already associated with your Google Search Console for a smoother verification process later.</p>
+                <h3>1.1 Understanding the Publisher Contract</h3>
+                <p>By signing up for AdSense, you enter a legal agreement with Google. They provide the advertisers, and you provide the audience. If your site contains adult content, illegal downloads, or copyrighted material, your genesis will end in an immediate ban. Integrity is the currency of the AdSense ecosystem.</p>
             </section>
 
-            <!-- Page 2: Tech Foundation -->
+            <!-- CHAPTER 2 -->
             <section id="page-2" class="content-section">
-                <span class="tip-badge">Level: Essential</span>
-                <h2 class="serif">Chapter 2: Technical Foundation & Security</h2>
-                <p>Google will not approve a site that feels "unsafe" or "temporary." Your technical setup must scream professionality from the very first crawl.</p>
-                
-                <h3>2.1 Activating SSL (HTTPS)</h3>
-                <p>In 2024, HTTP is obsolete. Google requires your site to be served over <strong>HTTPS</strong>. If you are using GitHub Pages or Netlify, go to your 'Domain Settings' and ensure 'Enforce HTTPS' is checked. This encrypts the data between your server and the user, a non-negotiable trust factor for AdSense.</p>
-                
-                <h3>2.2 Pre-emptive ads.txt Setup</h3>
-                <p>Many wait until after approval to add <code>ads.txt</code>. <strong>Don't.</strong> Create a file named <code>ads.txt</code> in your root directory. Even if it's empty or contains only your publisher ID (which you get after signing up), it signals to the bot that you are a technically competent publisher ready for a transparent ad ecosystem.</p>
+                <h2 class="serif">Chapter 2: Technical Hardening & SSL Security</h2>
+                <p>Technical SEO acts as the structural skeleton of your site. If the skeleton is weak, the content will collapse under scrutiny. Google’s automated crawlers prioritize sites that demonstrate modern technical standards.</p>
+                <div class="tip-box">
+                    <strong>Critical Setup:</strong> Always ensure your site is served over HTTPS. This is not just for security; it is a mandatory trust signal for the AdSense bot.
+                </div>
+                <h3>2.1 The ads.txt Protocol</h3>
+                <p>Even before approval, you should have an <code>ads.txt</code> file in your root directory. This tells the crawler that you are aware of industry standards for ad transparency. Create a plain text file at <code>yourdomain.com/ads.txt</code> to prepare for your publisher ID integration.</p>
             </section>
 
-            <!-- Page 3: Tracking Ecosystem -->
+            <!-- CHAPTER 3 -->
             <section id="page-3" class="content-section">
-                <span class="tip-badge">Level: Intermediate</span>
-                <h2 class="serif">Chapter 3: The Data Ecosystem (GSC & GA4)</h2>
-                <p>You cannot improve what you cannot measure. Google needs to see that you are tracking your site's performance through their own tools.</p>
-                
-                <div class="step-card">
-                    <h4 class="font-black text-xl mb-4">Google Search Console (GSC) Setup</h4>
-                    <p class="text-sm mb-4">This is the most important step for indexing. Google must know your site exists.</p>
-                    <ul class="list-disc pl-6 space-y-2 text-slate-600">
-                        <li>Go to <strong>Google Search Console</strong> and add your 'Property'.</li>
-                        <li>Verify ownership via the <strong>HTML Tag</strong> (Paste it in your <code>&lt;head&gt;</code>) or <strong>DNS record</strong>.</li>
-                        <li>Submit your <code>sitemap.xml</code>. This tells Google exactly which pages to crawl.</li>
+                <h2 class="serif">Chapter 3: The Data Tracking Ecosystem</h2>
+                <p>You cannot manage what you do not measure. Google requires publishers to be data-literate. This chapter covers the integration of Google Search Console (GSC) and Google Analytics 4 (GA4).</p>
+                <h3>3.1 Google Search Console Integration</h3>
+                <p>GSC is the direct line of communication between your site and Google Search. Submit your <code>sitemap.xml</code> immediately. If your pages are not appearing in the GSC 'Index' report, the AdSense bot will not be able to find enough content to approve your account.</p>
+                <h3>3.2 Monitoring User Intent with GA4</h3>
+                <p>AdSense prefers sites with organic, engaged traffic. GA4 allows you to see if users are bouncing immediately or staying to read. Aim for a bounce rate below 70% before applying for your first review.</p>
+            </section>
+
+            <!-- CHAPTER 4 -->
+            <section id="page-4" class="content-section">
+                <h2 class="serif">Chapter 4: Content Engineering & E-E-A-T</h2>
+                <p>Content is the primary factor in 99% of AdSense approvals. Google evaluates content based on E-E-A-T: Experience, Expertise, Authoritativeness, and Trustworthiness. This chapter explains how to engineer posts that meet these criteria.</p>
+                <h3>4.1 The 1,500-Word Golden Rule</h3>
+                <p>Thin content is the most common rejection reason. Every post should be a comprehensive guide of at least 1,500 words. Use data, tables, and lists to increase the 'Information Density' score of your pages.</p>
+            </section>
+
+            <!-- CHAPTER 5 -->
+            <section id="page-5" class="content-section">
+                <h2 class="serif">Chapter 5: Site Hierarchy & User Experience</h2>
+                <p>A site that is hard to navigate will be rejected for "Site Behavior." Your menu must be clear, your categories must be logical, and your footer must contain essential legal links.</p>
+                <div class="data-card">
+                    <h4 class="font-bold mb-4">The Ideal Footer Checklist</h4>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li>✅ Privacy Policy (Specifically mentioning AdSense)</li>
+                        <li>✅ Terms of Service</li>
+                        <li>✅ Contact Us (With active email)</li>
+                        <li>✅ About Us (With real human credentials)</li>
                     </ul>
                 </div>
-
-                <h3>3.2 Google Analytics 4 (GA4) Integration</h3>
-                <p>AdSense loves sites with organic traffic. By installing GA4, you show Google that you are monitoring user behavior, bounce rates, and session durations. High engagement metrics in GA4 can indirectly boost your approval chances.</p>
             </section>
 
-            <!-- Page 8: 10 Pro Hacks -->
+            <!-- CHAPTER 6 -->
+            <section id="page-6" class="content-section">
+                <h2 class="serif">Chapter 6: The Application Laboratory</h2>
+                <p>The moment of application is critical. Where you place your AdSense code and how you configure your "Auto Ads" settings can influence the speed of your review.</p>
+                <h3>6.1 Code Placement Logic</h3>
+                <p>Place the AdSense snippet exactly between the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags. Do not use plugins if possible; manual placement ensures that the bot can find the code with zero latency during its initial ping.</p>
+            </section>
+
+            <!-- CHAPTER 7 -->
+            <section id="page-7" class="content-section">
+                <h2 class="serif">Chapter 7: Clean Code & Performance Protocol</h2>
+                <p>Google’s Core Web Vitals are now a core part of the publisher evaluation. Your site must load fast and remain stable. This chapter covers the technical "Cleanliness" required for a 'Yes'.</p>
+                <div class="tip-box">
+                    <strong>Developer Tip:</strong> Press F12 in Chrome, go to the 'Console' tab. If you see red error messages, fix them before applying. Red errors signal a broken or unmanaged site.
+                </div>
+            </section>
+
+            <!-- CHAPTER 8 -->
             <section id="page-8" class="content-section">
-                <span class="tip-badge">Level: Expert</span>
-                <h2 class="serif">Chapter 8: 10 Insider Pro-Hacks for Guaranteed Approval</h2>
-                <p>These are the secrets used by niche site empires to bypass the "Manual Review" hurdle.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">01. The "About Me" Photo</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Include a real photo of yourself on the 'About' page. AI bots are getting better at detecting "fake" personas. A real human face increases trust scores exponentially.</p>
+                <h2 class="serif">Chapter 8: 10 Insider Pro-Hacks for Success</h2>
+                <p>These 10 hacks are collected from high-level publishers who consistently pass the AdSense audit in under 7 days.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">01</span>
+                        <h5 class="font-bold mt-2">The Real Person Protocol</h5>
+                        <p class="text-xs text-slate-500 mt-2">Include a real photo of yourself. Google's AI favors sites that show human accountability over anonymous content farms.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">02. The Comment Hack</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Ask 2-3 friends to leave high-quality, long comments on your posts. It signals to Google that your content is engaging and creates a community.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">02</span>
+                        <h5 class="font-bold mt-2">Simulated Community</h5>
+                        <p class="text-xs text-slate-500 mt-2">Enable a comment section and have 3-5 high-quality discussions. It signals an active, valuable community.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">03. Zero External Links Initially</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">For the first 10 posts, don't link to external sites. Keep the "Link Juice" within your site to prove your own content's depth.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">03</span>
+                        <h5 class="font-bold mt-2">WebP Format Standard</h5>
+                        <p class="text-xs text-slate-500 mt-2">Convert all images to WebP. Speed is a massive factor in the 'Site Behavior' audit metric.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">04. Use WebP Images</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Only use WebP format for images. It drastically improves site speed, which is a key metric for the 'Site Behavior' audit.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">04</span>
+                        <h5 class="font-bold mt-2">The Font-Weight Audit</h5>
+                        <p class="text-xs text-slate-500 mt-2">Use at least 16px font size. Tiny text leads to "Mobile Usability" rejections.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">05. The 1,200 Word Baseline</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Never publish anything under 1,200 words before approval. "Thin content" is the #1 killer of new accounts.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">05</span>
+                        <h5 class="font-bold mt-2">Category Pruning</h5>
+                        <p class="text-xs text-slate-500 mt-2">Delete any category that has fewer than 3 posts. Empty categories trigger "Thin Content" flags.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">06. Breadcrumb Logic</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Enable breadcrumbs (e.g., Home > Tech > Reviews). It helps the Google bot map your site architecture instantly.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">06</span>
+                        <h5 class="font-bold mt-2">Zero External Links</h5>
+                        <p class="text-xs text-slate-500 mt-2">During the first audit, avoid linking to external sites. Keep the bot focused on your own high-value content.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">07. Clean Console Protocol</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Open Chrome DevTools (F12) and ensure the 'Console' tab has zero red errors. Any script error can lead to a 'Site Down' rejection.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">07</span>
+                        <h5 class="font-bold mt-2">The 'Manual Inspection' Hack</h5>
+                        <p class="text-xs text-slate-500 mt-2">In GSC, manually inspect and request indexing for your top 5 pages every 48 hours until approved.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">08. Privacy Policy Depth</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Don't use a generic 1-page policy. Use a generator that specifically mentions "Google AdSense" and "Cookies."</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">08</span>
+                        <h5 class="font-bold mt-2">System Font Usage</h5>
+                        <p class="text-xs text-slate-500 mt-2">Use system fonts like 'Inter' or 'Arial' to ensure zero layout shift during the bot's visit.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">09. Category Management</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">If a category has only 1 post, delete the category. Every category should have at least 3-5 posts to avoid 'Empty Category' flags.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">09</span>
+                        <h5 class="font-bold mt-2">The About-Me Depth</h5>
+                        <p class="text-xs text-slate-500 mt-2">Mention your LinkedIn or professional history. Authoritative signals are key for YMYL topics.</p>
                     </div>
-                    <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-                        <h5 class="font-black text-blue-600 mb-2">10. Use System Fonts</h5>
-                        <p class="text-xs leading-relaxed text-slate-500">Avoid heavy custom web fonts. Use system fonts (like Inter or Arial) to ensure the fastest possible rendering for the Google bot.</p>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <span class="text-blue-600 font-black text-xs">10</span>
+                        <h5 class="font-bold mt-2">Breadcrumb Navigation</h5>
+                        <p class="text-xs text-slate-500 mt-2">Always show Home > Category > Post. It helps the crawler understand your site's hierarchy instantly.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Pagination Controls -->
-            <div class="mt-20 pt-10 border-t border-slate-100 flex justify-between items-center">
-                <button onclick="prevPage()" class="text-sm font-bold text-slate-400 hover:text-blue-600 transition">← Previous Chapter</button>
-                <div class="flex space-x-2">
-                    <span id="page-indicator" class="text-xs font-black bg-blue-50 text-blue-600 px-3 py-1 rounded-full uppercase tracking-tighter">Page 1 of 10</span>
+            <!-- CHAPTER 9 -->
+            <section id="page-9" class="content-section">
+                <h2 class="serif">Chapter 9: The Rejection Laboratory</h2>
+                <p>If you receive a rejection, treat it as a checklist. Google provides a reason; your job is to over-correct that reason. This chapter analyzes the "Low Value" and "Navigation" errors in depth.</p>
+                <h3>9.1 Fixing 'Low Value Content'</h3>
+                <p>This is the most common error. It means your content is too similar to what already exists. To fix this, add personal case studies, original research, or unique infographics that cannot be found elsewhere.</p>
+            </section>
+
+            <!-- CHAPTER 10 -->
+            <section id="page-10" class="content-section">
+                <h2 class="serif">Chapter 10: The Ultimate 50-Point Pre-Audit</h2>
+                <p>This final chapter provides an exhaustive checklist. If you can check all 50 boxes (summarized here into 5 core groups), you are ready for a 90%+ approval probability.</p>
+                <div class="space-y-4 my-10">
+                    <div class="flex items-center space-x-4 p-5 bg-green-50 border border-green-200 rounded-xl">
+                        <span class="text-green-600 font-black text-xl">✔</span>
+                        <p class="text-sm font-bold text-green-900">Structural integrity: Menus, Footers, and Breadcrumbs work perfectly.</p>
+                    </div>
+                    <div class="flex items-center space-x-4 p-5 bg-green-50 border border-green-200 rounded-xl">
+                        <span class="text-green-600 font-black text-xl">✔</span>
+                        <p class="text-sm font-bold text-green-900">Legal compliance: Privacy and Terms pages mention AdSense/Cookies.</p>
+                    </div>
+                    <div class="flex items-center space-x-4 p-5 bg-green-50 border border-green-200 rounded-xl">
+                        <span class="text-green-600 font-black text-xl">✔</span>
+                        <p class="text-sm font-bold text-green-900">Content depth: At least 15 posts, each over 1,500 words of original text.</p>
+                    </div>
+                    <div class="flex items-center space-x-4 p-5 bg-green-50 border border-green-200 rounded-xl">
+                        <span class="text-green-600 font-black text-xl">✔</span>
+                        <p class="text-sm font-bold text-green-900">Speed Optimization: PageSpeed scores are in the green (90+).</p>
+                    </div>
+                    <div class="flex items-center space-x-4 p-5 bg-green-50 border border-green-200 rounded-xl">
+                        <span class="text-green-600 font-black text-xl">✔</span>
+                        <p class="text-sm font-bold text-green-900">Indexing status: Core pages are indexed and visible in Google Search.</p>
+                    </div>
                 </div>
-                <button onclick="nextPage()" class="text-sm font-bold text-blue-600 hover:text-blue-800 transition">Next Chapter →</button>
+                <p>Once these are complete, click 'Request Review' and wait for the email that will change your publishing career.</p>
+            </section>
+
+            <!-- Navigation Controls -->
+            <div class="mt-20 pt-10 border-t border-slate-100 flex justify-between items-center">
+                <button onclick="prevPage()" class="text-sm font-bold text-slate-400 hover:text-blue-600">← Back</button>
+                <div id="page-dots" class="flex space-x-2"></div>
+                <button onclick="nextPage()" class="bg-blue-700 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-800 shadow-xl transition">Next Chapter →</button>
             </div>
         </main>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-100 py-20 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-            <div class="max-w-xs">
-                <h4 class="text-xl font-black text-blue-700 mb-4">EASYADGUIDE</h4>
-                <p class="text-sm text-slate-400 leading-relaxed">The only encyclopedia you need to conquer the Google AdSense audit. Data-driven, community-tested, and updated for 2024.</p>
+    <footer class="bg-slate-900 text-white py-20 mt-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <h3 class="text-2xl font-black mb-6 italic tracking-tighter uppercase">EasyAdGuide</h3>
+                <p class="text-slate-400 max-w-sm leading-relaxed">The global gold standard for AdSense approval strategies. Built for serious publishers who demand results.</p>
             </div>
-            <div class="grid grid-cols-2 gap-16">
-                <div>
-                    <h5 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-6">Legal</h5>
-                    <ul class="text-sm text-slate-500 space-y-4">
-                        <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-blue-600 transition font-bold underline italic text-blue-600">Linktree & Terms</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-6">Support</h5>
-                    <p class="text-sm text-slate-500">Contact: offthemain@proton.me</p>
-                </div>
+            <div>
+                <h5 class="font-bold text-blue-400 text-xs uppercase tracking-widest mb-6">Legal Resources</h5>
+                <ul class="text-sm text-slate-500 space-y-4">
+                    <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white transition font-bold underline text-blue-500 italic">Terms & Linktree</a></li>
+                    <li><a href="mailto:offthemain@proton.me" class="hover:text-white transition">Support Email</a></li>
+                </ul>
             </div>
+            <div>
+                <h5 class="font-bold text-blue-400 text-xs uppercase tracking-widest mb-6">Status</h5>
+                <p class="text-xs text-slate-500 leading-relaxed">Updated: March 2024<br>Build: v4.2 Global<br>Contact: offthemain@proton.me</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-800 text-center text-[10px] text-slate-600 uppercase tracking-widest">
+            © 2024 EasyAdGuide Global Manual. Designed for Publisher Success.
         </div>
     </footer>
 
@@ -201,25 +277,30 @@
 
         function showPage(n) {
             if(n < 1 || n > totalPages) return;
-            
-            // Hide all sections
             document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-            // Remove active class from all sidebar items
             document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
             
-            // Show target
             document.getElementById('page-' + n).classList.add('active');
             document.querySelectorAll('.sidebar-item')[n-1].classList.add('active');
             
             currentPage = n;
-            document.getElementById('page-indicator').innerText = `Page ${n} of ${totalPages}`;
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateDots();
         }
 
-        function nextPage() { if(currentPage < totalPages) showPage(currentPage + 1); }
+        function updateDots() {
+            const dots = document.getElementById('page-dots');
+            dots.innerHTML = '';
+            for(let i=1; i<=totalPages; i++) {
+                const activeClass = i === currentPage ? 'bg-blue-600' : 'bg-slate-200';
+                dots.innerHTML += `<div class="w-2 h-2 rounded-full ${activeClass}"></div>`;
+            }
+        }
+
+        function nextPage() { if(currentPage < totalPages) showPage(currentPage + 1); else showPage(1); }
         function prevPage() { if(currentPage > 1) showPage(currentPage - 1); }
 
-        // Placeholder for other pages logic (For brevity, you can duplicate Page 1/2 structure into 10 sections)
+        window.onload = () => showPage(1);
     </script>
 </body>
 </html>
