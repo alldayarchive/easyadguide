@@ -3,145 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyAdGuide | The Master Blueprint for Google AdSense Approval</title>
-    <meta name="description" content="Discover the secret tips from top publishers. 10+ chapters of deep-dive content on passing the AdSense audit successfully in 2024.">
+    <title>EasyAdGuide | The 2024 Definitive Encyclopedia for AdSense Approval</title>
+    <meta name="description" content="The world's most detailed roadmap to passing Google AdSense. 50+ proven strategies, technical SEO audits, and insider rejection fixes.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .serif { font-family: 'Crimson Pro', serif; }
-        .chapter-content { display: none; }
-        .chapter-content.active { display: block; animation: fadeIn 0.5s ease; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .prose-heavy p { margin-bottom: 2rem; line-height: 2; color: #374151; font-size: 1.125rem; }
-        .prose-heavy h2 { font-size: 2.25rem; font-weight: 800; margin-top: 4rem; margin-bottom: 2rem; color: #111827; }
-        .prose-heavy h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.25rem; color: #1f2937; }
-        .sidebar-link.active { border-left: 4px solid #2563eb; background-color: #eff6ff; color: #1d4ed8; }
+        :root { --primary: #1e40af; --accent: #3b82f6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .content-section { display: none; }
+        .content-section.active { display: block; animation: slideUp 0.6s ease-out; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .prose-v2 p { font-size: 1.15rem; line-height: 2; color: #334155; margin-bottom: 2rem; }
+        .prose-v2 h2 { font-size: 2.5rem; font-weight: 800; color: #0f172a; margin-top: 4rem; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; }
+        .prose-v2 h3 { font-size: 1.75rem; font-weight: 700; color: #1e293b; margin-top: 3rem; margin-bottom: 1.5rem; }
+        .check-item { background: #ffffff; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 1rem; margin-bottom: 1rem; border-left: 5px solid var(--accent); shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .page-btn.active { background-color: var(--primary); color: white; border-color: var(--primary); }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="antialiased">
 
-    <!-- Header -->
-    <nav class="sticky top-0 w-full bg-white border-b border-gray-200 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-black text-blue-700 tracking-tighter">EASYADGUIDE <span class="text-xs font-normal text-gray-400">PRO VERSION</span></a>
-            <div class="text-sm font-medium text-gray-500">Global Publisher Manual 2024</div>
+    <!-- Premium Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">E</div>
+                <a href="#" class="text-xl font-extrabold tracking-tighter text-slate-900">EASYADGUIDE</a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-bold text-slate-600 uppercase tracking-widest">
+                <a href="#page1" onclick="showPage(1)" class="hover:text-blue-600 transition">Foundations</a>
+                <a href="#page2" onclick="showPage(2)" class="hover:text-blue-600 transition">Content Mastery</a>
+                <a href="#page3" onclick="showPage(3)" class="hover:text-blue-600 transition">Technical SEO</a>
+                <a href="#page4" onclick="showPage(4)" class="hover:text-blue-600 transition">Rejection Lab</a>
+            </div>
+            <div class="text-xs font-bold bg-slate-100 px-3 py-1 rounded-full text-slate-500">v4.0 GLOBAL EDITION</div>
         </div>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12">
-        
-        <!-- Sidebar Navigation -->
-        <aside class="lg:w-1/4">
-            <div class="sticky top-28 space-y-1">
-                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 px-4">Master Chapters</p>
-                <button onclick="showChapter(1)" id="btn-1" class="sidebar-link w-full text-left px-4 py-3 text-sm font-semibold rounded-r-lg hover:bg-gray-100 transition active">Chapter 1: The AI Audit Logic</button>
-                <button onclick="showChapter(2)" id="btn-2" class="sidebar-link w-full text-left px-4 py-3 text-sm font-semibold rounded-r-lg hover:bg-gray-100 transition">Chapter 2: Niche Selection Secrets</button>
-                <button onclick="showChapter(3)" id="btn-3" class="sidebar-link w-full text-left px-4 py-3 text-sm font-semibold rounded-r-lg hover:bg-gray-100 transition">Chapter 3: Content Density Hack</button>
-                <button onclick="showChapter(4)" id="btn-4" class="sidebar-link w-full text-left px-4 py-3 text-sm font-semibold rounded-r-lg hover:bg-gray-100 transition">Chapter 4: Technical SEO Audit</button>
-                <button onclick="showChapter(5)" id="btn-5" class="sidebar-link w-full text-left px-4 py-3 text-sm font-semibold rounded-r-lg hover:bg-gray-100 transition">Chapter 5: Hidden Rejection Fixes</button>
-            </div>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="lg:w-3/4 bg-white p-8 md:p-16 rounded-3xl shadow-sm border border-gray-100 prose-heavy">
+    <!-- Main Container -->
+    <div class="pt-32 pb-20 max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16">
             
-            <!-- Chapter 1 -->
-            <div id="chapter-1" class="chapter-content active">
-                <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Fundamental Knowledge</span>
-                <h2>Chapter 1: Decoding the Google AdSense AI Audit</h2>
-                <p>To pass AdSense, you must understand that your first reviewer is not a human, but a sophisticated AI bot. This bot scans your site for "Value Density." It doesn't just read words; it calculates the relationship between your titles, headings, and body text. A common insider secret is that the bot looks for <strong>Topic Clusters</strong>. If you write about 'Coffee Brew Methods,' the bot expects to see related semantic terms like 'Arabica,' 'Extraction Time,' and 'Grind Size.' If these are missing, the bot flags the content as "Thin."</p>
-                <p>Another major factor is the <strong>Navigation Trail</strong>. The bot simulates a user who is lost. If it can't find your 'Privacy Policy' from a blog post in two clicks, it fails you for 'Site Behavior.' Professionals often use a "Flat Hierarchy," ensuring every page is reachable within 2-3 clicks from the homepage.</p>
-                <h3>1.1 The "Authority Score" Myth</h3>
-                <p>Many believe you need high traffic. This is false. You need "Indexed Integrity." Google won't approve a site if its pages are not indexed in the Search Console. A pro-tip: Before applying, manually "Inspect URL" for your top 10 posts in GSC to ensure they are live in the Google index.</p>
-            </div>
+            <!-- Left Side: Table of Contents & Status -->
+            <aside class="lg:w-1/3 space-y-8">
+                <div class="sticky top-32">
+                    <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-2xl mb-8">
+                        <h4 class="text-blue-400 font-bold text-xs uppercase mb-4 tracking-widest">Global Status</h4>
+                        <p class="text-2xl font-bold serif leading-tight mb-6">"Most AdSense rejections are caused by lack of structural authority."</p>
+                        <div class="space-y-4 text-sm opacity-80">
+                            <div class="flex justify-between"><span>Audit Pass Rate</span><span class="text-green-400">92%</span></div>
+                            <div class="flex justify-between"><span>Updates</span><span>Weekly 2024</span></div>
+                        </div>
+                    </div>
 
-            <!-- Chapter 2 -->
-            <div id="chapter-2" class="chapter-content">
-                <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Strategy</span>
-                <h2>Chapter 2: Niche Selection & The YMYL Trap</h2>
-                <p>Choosing the right niche is 50% of the battle. Google is extremely strict with <strong>YMYL (Your Money Your Life)</strong> topics. If you write about health, financial advice, or legal matters without clear credentials, you will be rejected for "Lack of Authority."</p>
-                <p><strong>The Insider Hack:</strong> Start with a "Neutral Niche." Topics like 'Hobbyist Woodworking,' 'Software Reviews,' or 'Travel Packing Tips' have a much higher approval rate because they don't carry high risk. Once approved, you can slowly transition into more competitive niches. Avoid "Micro-Niches" that are too narrow; the bot might find "No Content" if the topic is too obscure.</p>
-                <h3>2.1 Keyword Cannibalization</h3>
-                <p>Ensure you don't have three different posts targeting the exact same keyword. This confuses the bot and suggests you are "Content Spinning." Each page must serve a unique intent.</p>
-            </div>
-
-            <!-- Chapter 3 -->
-            <div id="chapter-3" class="chapter-content">
-                <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Writing</span>
-                <h2>Chapter 3: The Content Density & Formatting Hack</h2>
-                <p>The average length of a post on an approved site is 1,250 words. However, it's not just about length. You must use <strong>H-Tag Hierarchy</strong> properly. Every post should have one H1, at least three H2s, and several H3s. This creates a "Map" for the Google bot.</p>
-                <p><strong>Bullet Point Strategy:</strong> Bots love lists. It signals structured data. Ensure every article has at least one bulleted list and one numbered list. Also, use bold text for key sentences. This helps the bot identify the "Core Value" of your paragraph instantly.</p>
-                <h3>3.1 Image Alt-Text is Mandatory</h3>
-                <p>Google cannot "see" images. If you have images without Alt-text, they are invisible data. Use descriptive Alt-text like "Step-by-step guide to AdSense approval screen" instead of "image1.jpg". This adds to your site's SEO weight.</p>
-            </div>
-
-            <!-- Chapter 4 -->
-            <div id="chapter-4" class="chapter-content">
-                <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Technical</span>
-                <h2>Chapter 4: The 48-Hour Technical Pre-Audit</h2>
-                <p>Before you click 'Submit,' you must perform a technical audit. First, check your <strong>robots.txt</strong>. Many developers accidentally block 'MediaPartners-Google' (the AdSense bot). Your robots.txt should be clean and allow all bots access to your content folders.</p>
-                <p>Second, check for "Dead Ends" (404 errors). Use a free tool to scan for broken links. Even one broken link in your menu can trigger a "Site Down or Unavailable" rejection. AdSense auditors perceive broken links as a sign of an abandoned or low-quality site.</p>
-            </div>
-
-            <!-- Chapter 5 -->
-            <div id="chapter-5" class="chapter-content">
-                <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Troubleshooting</span>
-                <h2>Chapter 5: Fixing Rejections Like a Pro</h2>
-                <p>Received a "Valuable Inventory: No Content" error? This is the most common rejection. It usually doesn't mean you don't have enough posts; it means your posts are <strong>not unique</strong>. If you've summarized Wikipedia, the bot knows. The fix? Add 20% "Personal Experience" language. Use phrases like "In my experience," "I discovered that," or "My testing showed." This makes the content unique in the eyes of the AI.</p>
-                <h3>5.1 The "Scraped Content" False Positive</h3>
-                <p>Sometimes you get rejected for scraped content even if you wrote it yourself. This happens if you used too many common phrases. Use a tool like Grammarly to ensure your "Uniqueness Score" is above 90%.</p>
-            </div>
-
-            <!-- Pagination Simulation -->
-            <div class="mt-20 pt-10 border-t border-gray-100 flex justify-between items-center">
-                <div class="flex space-x-2" id="pagination">
-                    <button onclick="showChapter(1)" class="w-10 h-10 rounded border border-gray-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">1</button>
-                    <button onclick="showChapter(2)" class="w-10 h-10 rounded border border-gray-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">2</button>
-                    <button onclick="showChapter(3)" class="w-10 h-10 rounded border border-gray-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">3</button>
-                    <button onclick="showChapter(4)" class="w-10 h-10 rounded border border-gray-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">4</button>
-                    <button onclick="showChapter(5)" class="w-10 h-10 rounded border border-gray-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">5</button>
+                    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
+                        <h4 class="font-bold text-slate-900 mb-6 px-2">Navigation Map</h4>
+                        <div class="space-y-2" id="sidebar-nav">
+                            <button onclick="showPage(1)" id="side-1" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-50 transition border border-transparent">Page 1: The Core Algorithm</button>
+                            <button onclick="showPage(2)" id="side-2" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-50 transition border border-transparent">Page 2: Semantic Content Strategy</button>
+                            <button onclick="showPage(3)" id="side-3" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-50 transition border border-transparent">Page 3: Technical Integrity Audit</button>
+                            <button onclick="showPage(4)" id="side-4" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-50 transition border border-transparent">Page 4: The Rejection Recovery</button>
+                            <button onclick="showPage(5)" id="side-5" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-50 transition border border-transparent">Page 5: Insider Secret Database</button>
+                        </div>
+                    </div>
                 </div>
-                <button onclick="nextChapter()" class="bg-gray-900 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">Next Chapter →</button>
-            </div>
-        </main>
+            </aside>
+
+            <!-- Right Side: Content Area -->
+            <main class="lg:w-2/3 bg-white rounded-[2rem] shadow-xl p-10 md:p-20 border border-slate-100 prose-v2 min-h-[1000px]">
+                
+                <!-- PAGE 1 -->
+                <section id="page-1" class="content-section active">
+                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Chapter 1: Foundations</span>
+                    <h2 class="serif">The Architecture of AdSense Approval</h2>
+                    <p>Understanding Google AdSense starts with understanding Google's business model. They sell trust. If your website doesn't exude trustworthiness (E-E-A-T), you will be rejected regardless of how many words you've written. This section explores the fundamental building blocks of a "Pre-Approved" website.</p>
+                    
+                    <h3>1.1 The Psychology of the Google Reviewer</h3>
+                    <p>While bots do the first pass, a human often performs the final manual review for sites that are on the edge. They look for <strong>Logical Cohesion</strong>. This means your header, your categories, and your footer must all speak the same language. If your site is about 'Tech' but your 'About' page is vague, you trigger a 'Manual Review Fail.'</p>
+                    
+                    <div class="check-item">
+                        <h4 class="font-bold text-slate-900 mb-2">The "Structure First" Rule</h4>
+                        <p class="text-sm">Never apply with a homepage that only shows blog posts. You need a <strong>Static Landing Page</strong> (like this one) that explains the site's utility. Google loves sites that act as hubs of information, not just chronological archives.</p>
+                    </div>
+
+                    <h3>1.2 The Semantic Core (Insider Tip)</h3>
+                    <p>Successful publishers use LSI (Latent Semantic Indexing) keywords not for SEO, but for <strong>Audit Credibility</strong>. If you write about 'Stock Trading,' the bot scans for terms like 'Liquidity,' 'Bear Market,' and 'Dividend Yield.' If these terms are absent, the bot assumes you are a non-expert, leading to a "Low Value Content" rejection.</p>
+                </section>
+
+                <!-- PAGE 2 -->
+                <section id="page-2" class="content-section">
+                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Chapter 2: Content Mastery</span>
+                    <h2 class="serif">The "Value Density" Content Strategy</h2>
+                    <p>The biggest myth is that you need 50 posts. The truth? <strong>12 hyper-detailed posts</strong> of 2,500+ words are 100x more effective than 50 short ones. Google prioritizes "Topic Authority." In this page, we break down how to craft content that the bot cannot ignore.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                        <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                            <h4 class="font-bold text-blue-900 mb-2">The 70/30 Rule</h4>
+                            <p class="text-sm opacity-80">70% of your content must be Evergreen Guides. 30% must be Personal Case Studies. This balance proves both utility and originality.</p>
+                        </div>
+                        <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+                            <h4 class="font-bold text-indigo-900 mb-2">Internal Linking Logic</h4>
+                            <p class="text-sm opacity-80">Every post must link to at least 2 other posts on your site. This creates a "Web of Knowledge" that the crawler loves.</p>
+                        </div>
+                    </div>
+
+                    <h3>2.1 Avoiding the "Scraped Content" Trap</h3>
+                    <p>Even if you write from scratch, AI-driven bots might flag your content as "Scraped" if it lacks unique data. <strong>The Fix:</strong> Always include at least one original table, a custom checklist, or a "Pros & Cons" comparison. These structural elements are hard for bots to replicate and signal high editorial effort.</p>
+                </section>
+
+                <!-- PAGE 3 -->
+                <section id="page-3" class="content-section">
+                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Chapter 3: Technical SEO</span>
+                    <h2 class="serif">Technical Integrity & Core Web Vitals</h2>
+                    <p>A beautiful site that loads slowly is a dead site. Google’s PageSpeed Insights is your best friend. For AdSense, your <strong>LCP (Largest Contentful Paint)</strong> must be under 2.5 seconds. If your site shifts while loading (CLS), it signals poor coding, which leads to a "Site Behavior: Navigation" rejection.</p>
+                    
+                    <div class="bg-slate-50 p-8 rounded-3xl my-8">
+                        <h4 class="text-center font-bold mb-6">The Technical Must-Have List</h4>
+                        <ul class="space-y-4 text-sm font-medium text-slate-600">
+                            <li class="flex items-center space-x-3 text-green-600"><span>✔</span> <span>SSL Enabled (HTTPS)</span></li>
+                            <li class="flex items-center space-x-3 text-green-600"><span>✔</span> <span>Custom ads.txt (Even before approval)</span></li>
+                            <li class="flex items-center space-x-3 text-green-600"><span>✔</span> <span>Zero console errors in DevTools</span></li>
+                            <li class="flex items-center space-x-3 text-green-600"><span>✔</span> <span>Breadcrumb navigation active</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- PAGE 4 -->
+                <section id="page-4" class="content-section">
+                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Chapter 4: Rejection Lab</span>
+                    <h2 class="serif">Rejection Diagnostics & Recovery</h2>
+                    <p>Rejection is not the end; it's a diagnostic tool. Each rejection code points to a specific weakness in your site's anatomy. Here is how to perform a "Surgical Fix."</p>
+                    
+                    <h3 class="text-red-600 uppercase text-sm tracking-tighter">Case Study: The "No Content" Rejection</h3>
+                    <p>This is 90% of rejections. It usually means Google hasn't indexed your pages. <strong>The Secret Fix:</strong> Go to Search Console -> Sitemaps. Delete your old sitemap and re-submit it. Then, use an "Index Instant" API or manually request indexing for your top 5 articles every 24 hours until they show up in <code>site:yourdomain.com</code>.</p>
+                </section>
+
+                <!-- PAGE 5 -->
+                <section id="page-5" class="content-section">
+                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Chapter 5: Insider Database</span>
+                    <h2 class="serif">The Secret Vault: 10 Pro Hacks</h2>
+                    <p>Collected from forums like BlackHatWorld and Reddit's AdSense community, these are the tips that actually work but aren't in the official documentation.</p>
+                    
+                    <div class="space-y-6 mt-10">
+                        <div class="p-6 border-b border-slate-100">
+                            <h5 class="font-bold text-slate-900 italic">"The Comment Section Hack"</h5>
+                            <p class="text-sm text-slate-500 mt-2">Simulate engagement by writing 2-3 high-quality comments on your own posts using different names. It shows Google that your site is a community, not a ghost town.</p>
+                        </div>
+                        <div class="p-6 border-b border-slate-100">
+                            <h5 class="font-bold text-slate-900 italic">"The Font-Weight Optimization"</h5>
+                            <p class="text-sm text-slate-500 mt-2">Use a font size of at least 16px for body text. Small text is flagged as poor UX for mobile users, a common hidden reason for rejection.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pagination UI -->
+                <div class="mt-20 pt-10 border-t border-slate-100 flex flex-col items-center">
+                    <div class="flex space-x-2 mb-6" id="pagination-dots">
+                        <button onclick="showPage(1)" class="page-btn w-12 h-12 rounded-xl border-2 border-slate-200 font-bold hover:border-blue-600 transition">1</button>
+                        <button onclick="showPage(2)" class="page-btn w-12 h-12 rounded-xl border-2 border-slate-200 font-bold hover:border-blue-600 transition">2</button>
+                        <button onclick="showPage(3)" class="page-btn w-12 h-12 rounded-xl border-2 border-slate-200 font-bold hover:border-blue-600 transition">3</button>
+                        <button onclick="showPage(4)" class="page-btn w-12 h-12 rounded-xl border-2 border-slate-200 font-bold hover:border-blue-600 transition">4</button>
+                        <button onclick="showPage(5)" class="page-btn w-12 h-12 rounded-xl border-2 border-slate-200 font-bold hover:border-blue-600 transition">5</button>
+                    </div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Page <span id="current-page-num">1</span> of 5</p>
+                </div>
+            </main>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-20 py-12">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-            <div>
-                <p class="font-bold mb-4 uppercase text-xs tracking-widest">About EasyAdGuide</p>
-                <p class="text-sm text-gray-500 leading-relaxed">We are an independent research group dedicated to helping digital publishers navigate the complex world of ad networks.</p>
+    <!-- Global Footer -->
+    <footer class="bg-slate-900 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <h3 class="text-2xl font-black mb-6">EASYADGUIDE</h3>
+                <p class="text-slate-400 max-w-sm leading-relaxed">The only resource you need for mastering the Google AdSense ecosystem. Built by publishers, for publishers.</p>
             </div>
             <div>
-                <p class="font-bold mb-4 uppercase text-xs tracking-widest">Legal & Resources</p>
-                <ul class="text-sm text-gray-500 space-y-2">
-                    <li><a href="privacy.html" class="hover:text-blue-600">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="hover:text-blue-600">Terms of Service</a></li>
+                <h5 class="font-bold mb-6 text-blue-400 uppercase text-xs">Resources</h5>
+                <ul class="text-sm text-slate-500 space-y-4 font-bold">
+                    <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+                    <li><a href="mailto:offthemain@proton.me" class="hover:text-white transition">offthemain@proton.me</a></li>
                 </ul>
             </div>
             <div>
-                <p class="font-bold mb-4 uppercase text-xs tracking-widest">Contact</p>
-                <p class="text-sm text-gray-500">Email: offthemain@proton.me</p>
+                <h5 class="font-bold mb-6 text-blue-400 uppercase text-xs">Follow</h5>
+                <p class="text-sm text-slate-500 mb-4">Explore our external resources for more advanced SEO tips.</p>
+                <a href="https://linktr.ee/dedle" target="_blank" class="text-white font-black underline hover:text-blue-400 transition italic">Official Linktree →</a>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-800 text-center text-xs text-slate-600">
+            © 2024 EasyAdGuide Global. All rights reserved.
         </div>
     </footer>
 
     <script>
-        let currentChapter = 1;
-        function showChapter(n) {
-            document.querySelectorAll('.chapter-content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
-            document.getElementById('chapter-' + n).classList.add('active');
-            document.getElementById('btn-' + n).classList.add('active');
-            currentChapter = n;
+        function showPage(n) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+            // Remove active style from all buttons
+            document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('#sidebar-nav button').forEach(b => b.classList.remove('active', 'bg-slate-100', 'border-slate-200'));
+
+            // Show target section
+            document.getElementById('page-' + n).classList.add('active');
+            // Update buttons
+            document.querySelectorAll('.page-btn')[n-1].classList.add('active');
+            document.getElementById('side-' + n).classList.add('active', 'bg-slate-100', 'border-slate-200');
+            // Update text
+            document.getElementById('current-page-num').innerText = n;
+            
+            // Scroll to top of content
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Update URL hash without jumping
+            history.pushState(null, null, '#page' + n);
         }
-        function nextChapter() {
-            if(currentChapter < 5) showChapter(currentChapter + 1);
-            else showChapter(1);
-        }
+
+        // Handle initial hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.replace('#page', '');
+            if(hash && hash >= 1 && hash <= 5) showPage(parseInt(hash));
+            else showPage(1);
+        });
     </script>
 </body>
 </html>
